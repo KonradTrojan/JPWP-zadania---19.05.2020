@@ -69,9 +69,9 @@ public class Server implements Runnable{
         for(int i = 0; i < clientsList.size(); i++){
             // za pomocą pętli for wyślij (metodą send) wiadomość message do każdego klienta z listy clientsList
             // do pobrania gniazda użyj metody getClientSocket() w stosunku do danego klienta z listy
-            for(int j = 0; j < clientsList.size(); j++) {
-                send(message, clientsList.get(j).getClientSocket());
-            }
+
+            send(message, clientsList.get(i).getClientSocket());
+
         }
     }
 
